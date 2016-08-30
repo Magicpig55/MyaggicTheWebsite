@@ -1,25 +1,36 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link type="" />
-        <script src="" />
-    </head>
-    <body>
-        <header>
-            <h1>Myaggic.com</h1>
-            <nav>
-                <a href="../index.html">Home</a>
-                <a href="/about.html">About</a>
-                <a href="/gamedev.html">Game Developement</a>
-                <a href="/2Dart.html">2D Art</a>
-                <a href="/3D.html">3D</a>
-                <a href="/photography.html">Photography</a>
-                <a href="/about.html">About</a>
-                <a href="/contact.html">Contact</a>
-            </nav>
-        </header>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Karla|Open+Sans" rel="stylesheet">
+    <script src="scripts/lib/jquery-3.1.0.min.js"> </script>
+    <script src="scripts/lib/jquery.smoothState.min.js"> </script>
+    <script src="scripts/staticheader.js"> </script>
+    <script src="scripts/transitions.js"> </script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div id="scene">
+        <div id="headKeeper">
+            <header class="scene_element scene_element--fadeinup">
+                <h1>Myaggic.com</h1>
+                <nav>
+                    <a href="index.html" class="active">Home</a>
+                    <a href="gamedev/index.html">Game Developement</a>
+                    <a href="2Dart/">2D Art</a>
+                    <a href="3D/">3D</a>
+                    <a href="photography/">Photography</a>
+                    <a href="about/">About</a>
+                    <a href="contact/">Contact</a>
+                </nav>
+            </header>
+        </div>
         <main>
-            This is some content
+            <div class="testBox scene_element scene_element--fadein"></div>
+            <div class="testBox scene_element scene_element--fadeinright"></div>
         </main>
-    </body>
+    </div>
+</body>
+
 </html>
