@@ -1,0 +1,136 @@
+html, body {
+    background: #303030;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    margin: 0;
+}
+
+/* ==== Header styling === */
+#headKeeper {
+    height: 142px;
+    width: 100%;
+}
+header {
+    background: #212121;
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.5);
+
+    h1 {
+        font-family: 'Karla', sans-serif;
+        font-style: italic;
+        text-align: center;
+        margin-bottom: 5px;
+        margin-top: 0;
+        font-size: 64px;
+    }
+
+    &.fixed {
+        position: fixed;
+        width: 100%;
+
+        h1 {
+            display: none;
+        }
+
+        nav a {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    }
+
+    nav {
+        display: flex;
+        display: -webkit-flex;
+        flex: auto;
+
+        a {
+            flex: auto;
+            text-align: center;
+            vertical-align: middle;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            transition: background .2s, color .2s, box-shadow .2s, padding .1s;
+
+            &.active {
+                background: rgba(255, 255, 255, 0.25);
+                color: #b388ff;
+                box-shadow: 0px 5px 18px 2px rgba(0,0,0,0.5);
+            }
+            &:hover {
+                background: rgba(255, 255, 255, 0.25);
+                color: #b388ff;
+                box-shadow: 0px 5px 18px 6px rgba(0,0,0,0.5);
+            }
+            &:active {
+                    background: rgba(255, 255, 255, 0.5);
+                    box-shadow: 0px 5px 18px 2px rgba(0,0,0,0.5);
+            }
+        }
+    }
+}
+a {
+    text-decoration: none;
+    &:link {
+        color: rgba(101, 31, 255, 1);
+    }
+    &:visited {
+        color: rgba(101, 31, 255, .5);
+    }
+}
+
+/* === Page Transition Animations and Styling === */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translate3d(100%, 0, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+main .scene_element {
+    animation-duration: 0.25s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: both;
+    &--fadein {
+        animation-name: fadeIn;
+    }
+    &--fadeinup {
+        animation-name: fadeInUp;
+    }
+    &--fadeinright {
+        animation-name: fadeInRight;
+    }
+}
+main.is-exiting .scene_element {
+    animation-direction: alternate-reverse;
+}
+
+/* === TESTING === */
+.testBox {
+    width: 100px;
+    height: 100px;
+    background: black;
+}

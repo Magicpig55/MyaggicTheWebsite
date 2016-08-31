@@ -1,0 +1,4 @@
+Options +FollowSymLinks
+RewriteEngine On
+RewriteBase /
+RewriteRule ^css/(.*)\.css$ /css/scss.php/$1.scss [R=301,L]
