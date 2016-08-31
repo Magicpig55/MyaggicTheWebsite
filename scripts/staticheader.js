@@ -6,5 +6,10 @@ $(function () {
         } else {
             header.removeClass("fixed");
         }
+        if ($(window).scrollTop() > 100) {
+            header.addClass("nobg");
+        } else {
+            header.removeClass("nobg");
+        }
     });
 });
