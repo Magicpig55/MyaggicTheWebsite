@@ -9,48 +9,48 @@ html, body {
   height: 142px;
   width: 100%; }
 
-header {
+body header {
   background: #212121;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5);
   transition: background .2s;
   z-index: 100; }
-  header h1 {
+  body header h1 {
     font-family: 'Karla', sans-serif;
     font-style: italic;
     text-align: center;
     margin-bottom: 5px;
     margin-top: 0;
     font-size: 64px; }
-  header.fixed {
+  body header.fixed {
     position: fixed;
     width: 100%; }
-    header.fixed h1 {
+    body header.fixed h1 {
       display: none; }
-    header.fixed nav a {
+    body header.fixed nav a {
       padding-top: 10px;
       padding-bottom: 10px; }
-  header.nobg {
+  body header.nobg {
     /*background: rgba(0, 0, 0, 0);*/ }
-  header nav {
+  body header nav {
     display: flex;
     display: -webkit-flex;
     flex: auto; }
-    header nav a {
+    body header nav a {
       flex: auto;
       text-align: center;
       vertical-align: middle;
       padding-top: 20px;
       padding-bottom: 20px;
       transition: background .2s, color .2s, box-shadow .2s, padding .1s; }
-      header nav a.active {
+      body header nav a.active {
         background: rgba(255, 255, 255, 0.25);
         color: #b388ff;
         box-shadow: 0px 5px 18px 2px rgba(0, 0, 0, 0.5); }
-      header nav a:hover {
+      body header nav a:hover {
         background: rgba(255, 255, 255, 0.25);
         color: #b388ff;
         box-shadow: 0px 5px 18px 6px rgba(0, 0, 0, 0.5); }
-      header nav a:active {
+      body header nav a:active {
         background: rgba(255, 255, 255, 0.5);
         box-shadow: 0px 5px 18px 2px rgba(0, 0, 0, 0.5); }
 
@@ -61,44 +61,8 @@ a {
   a:visited {
     color: rgba(101, 31, 255, 0.5); }
 
-/* === Page Transition Animations and Styling === */
-@keyframes fadeIn {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0); }
-  100% {
-    opacity: 1;
-    transform: none; } }
-@keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    transform: translate3d(100%, 0, 0); }
-  100% {
-    opacity: 1;
-    transform: none; } }
-.scene_element {
-  animation-duration: 0.25s;
-  transition-timing-function: ease-in;
-  animation-fill-mode: both; }
-  .scene_element--fadein {
-    animation-name: fadeIn; }
-  .scene_element--fadeinup {
-    animation-name: fadeInUp; }
-  .scene_element--fadeinright {
-    animation-name: fadeInRight; }
-
-.is-exiting .scene_element {
-  animation-direction: alternate-reverse; }
-
-/* === TESTING === */
-.testBox {
-  width: 100px;
-  height: 100px;
-  background: black; }
+/* === Content Styling === */
+body main article {
+  background: #424242; }
 
 /*# sourceMappingURL=style.css.map */

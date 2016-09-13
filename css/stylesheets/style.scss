@@ -10,7 +10,7 @@ html, body {
     height: 142px;
     width: 100%;
 }
-header {
+body header {
     background: #212121;
     box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.5);
     transition: background .2s;
@@ -80,5 +80,12 @@ a {
     }
     &:visited {
         color: rgba(101, 31, 255, .5);
+    }
+}
+
+/* === Content Styling === */
+body main {
+    article {
+        background: #424242;
     }
 }
